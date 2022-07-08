@@ -1,0 +1,85 @@
+#aboutme {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    align-items: center;
+    scroll-snap-align: center;
+    background: linear-gradient(90deg, #367c2b , #808000 35%, #40a829 100%);
+    background-size: 100%;
+    background-repeat: none;
+}
+
+.texto_about {
+    width: 45%;
+    margin: auto;
+    background-color: #004526;
+    border-radius: 20%;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+p {
+    width: 75%;
+}
+
+h1, p, ul {
+    color: #fff;
+}
+
+.studies {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    margin: auto 30px;
+}
+
+.skills {
+    max-height: 75%;
+    max-width: 45%;
+    background-color: rgba(0, 128, 0, 0.507);
+    margin: auto;
+    border-radius: 30%;
+}
+
+.items {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.separador {
+    margin-right: 10px;
+    text-align: center;
+}
+
+.rectangle {
+    width: 100px;
+    height: 57px;
+    margin: 10px 10px;
+}
+
+.square {
+    width: 75px;
+    height: 65px;
+    margin: 10px 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    border-radius: 10px;
+    border: ridge;
+    border-color: black;
+}

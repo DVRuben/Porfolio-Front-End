@@ -1,0 +1,61 @@
+#home {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;    
+    background-image: url('src/assets/img/leaves.jpg');
+    background-size: 100%;
+    background-repeat: none;
+    scroll-snap-align: center;
+}
+
+.presentation {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-left: 200px;
+    margin-right: 200px;
+    height: 450px;
+    min-width: 900px;
+    background-color: rgba(0, 128, 0, 0.507);
+}
+
+.picture {
+    transition: all 2s;
+}
+
+.picture img {
+    height: 300px;
+    margin: 75px auto;
+    margin-left: 40%;
+    border-radius: 200px;
+    align-content: center;
+    border: ridge black;
+}
+
+.presentation_t {
+    text-align: center;
+    align-content: center;
+    margin: 140px;
+    margin-left: 25%;
+}
+
+.presentation_text {
+    font-family: Nuosu SIL;
+    text-align: center;
+    padding-top: 35px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 20px;
+    color: #eee;
+    height: 200px;
+    width: 375px;
+    background-color: rgb(24, 49, 9);
+    border-radius: 70px;
+    transition: all 1s;
+    border: ridge #000;
+}
+
+.presentation:hover .picture {
+    margin-right: -100px;
+}
