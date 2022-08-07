@@ -88,7 +88,7 @@
 }
 
 .cv {
-    margin-left: 800px;
+    margin-left: 650px;
     background-color: #50C878;
     color: black;
     border-radius: 5px;
@@ -98,4 +98,9 @@
 .cv:hover {
     background-color: yellow;
     color:#000;
+}
+
+.logo {
+    height: 60px;
+    width: 100px;
 }

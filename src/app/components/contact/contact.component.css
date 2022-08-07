@@ -1,4 +1,4 @@
-#aboutme {
+#contact {
     display: flex;
     flex-direction: row;
     height: 100vh;
@@ -10,7 +10,7 @@
 }
 
 .texto_about {
-    width: 30%;
+    width: 45%;
     margin: auto;
     background-color: rgba(0, 128, 0, 0.507);
 }
@@ -21,6 +21,10 @@ h1 {
     padding-bottom: 5px;
 }
 
+p {
+    width: 75%;
+}
+
 h1, p, ul {
     color: #fff;
 }
@@ -28,15 +32,16 @@ h1, p, ul {
 .studies {
     display: flex;
     flex-direction: row;
+    margin-left: 30px;
     margin-bottom: 20px;
 }
 
 p {
     text-align: center;
-    margin: auto;
+    margin: auto 30px;
 }
 
-.skills {
+.proyects {
     max-height: 75%;
     max-width: 45%;
     background-color: rgba(0, 128, 0, 0.507);
@@ -75,4 +80,11 @@ img {
     border-radius: 10px;
     border: ridge;
     border-color: black;
+}
+
+.github {
+    border: none;
+    width: 55px;
+    height: 55px;
+    margin-right: 10px;
 }
