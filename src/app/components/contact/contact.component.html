@@ -1,23 +1,97 @@
 <div id="contact">
-    <div class="texto_about">
-        <h1>Contact Me</h1>
-        <div>
-            <form>
-                <label>Full Name: </label>
-                <input type="text" id="newClient" name="newClient" placeholder="Type your full name"><br><br>
-                <label>Email: </label>
-                <input type="email" id="emailClient" name="emailClient" placeholder="Type your email address"><br><br>
-                <input type="text" id="message" name="messageClient" placeholder="Type your message">
-                <input type="submit" value="Submit">
-            </form>
+  <div class="texto_about">
+    <div class="container py-3">
+      <h1>Formulario de Contacto</h1>
+      <form id="contactForm" onsubmit="sendEmail(); reset(); falsa()">
+        <div class="mb-2">
+          <input class="form-control" id="name" type="text" placeholder="Nombre" data-sb-validations="required" />
+          <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
         </div>
+        <div class="mb-2">
+          <input class="form-control" id="email" type="email" placeholder="Email"
+            data-sb-validations="required, email" />
+          <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+          <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+        </div>
+        <div class="mb-2">
+          <textarea class="form-control" id="message" type="text" placeholder="Mensaje" style="height: 9rem;"
+            data-sb-validations="required"></textarea>
+          <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+        </div>
+        <div class="d-none" id="submitSuccessMessage">
+          <div class="text-center mb-3">Form submission successful!</div>
+        </div>
+        <div class="d-none" id="submitErrorMessage">
+          <div class="text-center text-danger mb-3">Error sending message!</div>
+        </div>
+        <div class="d-grid">
+          <button class="btn btn-primary btn-lg" id="submit" type="submit">Enviar</button>
+        </div>
+      </form>
     </div>
-    <div class="proyects">
-       <h1>Proyects</h1>
-       <ul class="items">
-           <li class="separador"><img class="github" src="assets/img/github.png" />My proyects on GitHub</li>
-           <li class="separador"><img class="rectangle" src="assets/img/portfolio.png"/>My portfolio 100% developed by me</li>
-           <li class="separador"><img class="square" src="assets/img/translation.jpg"/>Various freelance translation proyects in IT and medical fields</li>
-       </ul>
-    </div>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+  </div>
+  <div class="proyects">
+    <h5>Habilidades implementadas en el desarrollo de esta aplicación web:</h5>
+    <ul>
+      <li>
+        <i class="bi bi-stack"></i>HTML5
+      </li>
+      <li>
+        <i class="bi bi-stack"></i>CSS3
+      </li>
+      <li>
+        <i class="bi bi-stack"></i>Bootstrap Framework
+      </li>
+      <li>
+        <i class="bi bi-stack"></i>TypeScript Framework
+      </li>
+      <li>
+        <i class="bi bi-stack"></i>Angular Framework
+      </li>
+      <li>
+        <i class="bi bi-stack"></i>SQL
+      </li>
+      <li>
+        <i class="bi bi-stack"></i>Java
+      </li>
+      <li>
+        <i class="bi bi-stack"></i>Spring Boot Framework
+      </li>
+      <li>
+        <i class="bi bi-stack"></i>DevOps
+      </li>
+    </ul>
+  </div>
 </div>
+<footer>
+  <div>
+    <ul><h5>Información de Contacto:</h5>
+      <li>
+        Email: mauroruben@outlook.com
+      </li>
+      <li>
+        LinkedIn: <a href="https://www.linkedin.com/in/tradruben/">www.linkedin.com/in/tradruben/</a>
+      </li>
+      <li>
+        Tel.: (+353) 831196829
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul>
+      <h5>
+        Proyecto Integrador - Programador Web Full Stack Junior - Argentina Programa
+      </h5>
+      <li>
+        Fecha de entrega: 31-10-2022
+      </li>
+      <li>
+        Desarrollador: Mauro Damian Ruben
+      </li>
+      <li>
+        DNI: 38 916 759
+      </li>
+    </ul>
+  </div>
+</footer>

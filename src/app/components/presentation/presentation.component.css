@@ -20,42 +20,99 @@
     background-color: rgba(0, 128, 0, 0.507);
 }
 
+.contain_2 {
+    width: 50%;
+    height: 100%;
+    align-items: center;
+}
+
 .picture {
     transition: all 2s;
+    margin-top: 16%;
 }
 
 .picture img {
+    display: flex;
     height: 300px;
-    margin: 75px auto;
-    margin-left: 40%;
+    margin: auto;
     border-radius: 200px;
-    align-content: center;
     border: ridge black;
+    transition: 1s;
+    background-color: #000;
 }
 
 .presentation_t {
+    display: flex;
     text-align: center;
-    align-content: center;
-    margin: 140px;
-    margin-left: 25%;
+    max-width: 80%;
+    margin: auto;
+    margin-top: 25%;
 }
 
 .presentation_text {
     font-family: Nuosu SIL;
-    text-align: center;
-    padding-top: 35px;
-    padding-left: 5px;
-    padding-right: 5px;
-    font-size: 20px;
+    padding: 40px;
+    font-size: 21px;
     color: #eee;
-    height: 200px;
-    width: 375px;
     background-color: rgb(24, 49, 9);
     border-radius: 70px;
-    transition: all 1s;
     border: ridge #000;
+    transition: all 1s;
 }
 
 .presentation:hover .picture {
-    margin-right: -100px;
+    margin-left: 80px;
+}
+
+.btns-container_1{
+    visibility: hidden;
+    position: absolute;
+    transition: 1.2s;
+    margin-left: 350px;
+}
+
+.contain_2:hover > .btns-container_1{
+    visibility: visible;
+}
+
+.btns-container_2 {
+    visibility: hidden;
+    position: absolute;
+    margin-left: 400px;
+}
+
+.contain_2:hover > .btns-container_2{
+    visibility: visible;
+}
+
+.agregar{
+    display: flex;
+    margin: auto;
+}
+
+.btns {
+    background-color: black;
+    color: #eee;
+    border: none;
+    margin-right: 6px;
+    transition: 0.4s;
+    border-radius: 1em;
+}
+
+.btns-container_1:hover ~ .picture img{
+    opacity: 80%;
+}
+
+.presentation:hover > .btns-container_2{
+    visibility: visible;
+}
+
+.btns:hover {
+    transform: scale(1.4);
+}
+
+.foot {
+    width: 100%;
+    background-color: black;
+    height: 1%;
 }

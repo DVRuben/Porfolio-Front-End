@@ -1,10 +1,24 @@
 <div id="services">
     <div class="services">
-        <h1>Services</h1>
-        <ul class="items">
-            <li class="separador"><img class="github" src="assets/img/github.png" />My proyects on GitHub</li>
-            <li class="separador"><img class="rectangle" src="assets/img/portfolio.png"/>My portfolio 100% developed by me</li>
-            <li class="separador"><img class="square" src="assets/img/translation.jpg"/>Various freelance translation proyects in IT and medical fields</li>
+        <div class="title-container">
+            <h1>Experiencia y proyectos </h1>
+            <button type="button" class="agregar-experiencia" routerLink="/nuevaexp" *ngIf="isLogged"><h4><i class="bi bi-plus-square-dotted"></i></h4></button>
+        </div>
+        <ul class="items" *ngFor="let Experiencia of expe" class="cardexpe">
+            <li class="separador">
+                <div class="contenido-expe">
+                    <img class="square" src={{Experiencia.descripcionE}}/>{{Experiencia.nombreE}}
+                </div>
+                <div *ngIf="isLogged" class="btns-container">
+                    <button type="button" class="agregar-experiencia" routerLink="/editexp/{{Experiencia.id}}">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
+                    <button type="button" class="agregar-experiencia" (click)="deleteExperiencia(Experiencia.id)">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </div>
+            </li>
         </ul>
     </div>
 </div>
+<div class="footer"></div>

@@ -1,40 +1,48 @@
 <div id="aboutme">
     <div class="skills">
-       <h1>Skills & IT Tools</h1>
-       <ul class="items">
-           <li class="separador"><img class="rectangle" src="assets/img/sdltrados.png" /><br>SDL Trados Studio</li>
-           <li class="separador"><img class="rectangle" src="assets/img/memsource.jpg"/><br>Memsource</li>
-           <li class="separador"><img class="square" src="assets/img/xbench.jpg"/><br>Xbench</li>
-           <li class="separador"><img class="square" src="assets/img/js.webp" /><br>JavaScript</li>
-           <li class="separador"><img class="square" src="assets/img/html.png"/><br>HTML</li>
-           <li class="separador"><img class="square" src="assets/img/css.png"/><br>CSS</li>
-           <li class="separador"><img class="square" src="assets/img/mysql.png" /><br>MySQL</li>
-           <li class="separador"><img class="square" src="assets/img/angular.png"/><br>Angular</li>
-           <li class="separador"><img class="rectangle" src="assets/img/finnish.png"/><br>Finnish Language (B1)</li>
-           <li class="separador"><img class="rectangle" src="assets/img/italian.png"/><br>Italian Language (B1)</li>
-       </ul>
+        <div class="title-container">
+            <h1>Skills & IT Tools</h1>
+            <button type="button" class="agregar" routerLink="/nuevaskill" *ngIf="isLogged"><h4><i class="bi bi-plus-square-dotted"></i></h4></button>
+        </div>
+        <div class="lists-container">
+            <ul *ngFor="let Skill of skill" class="cardSkills">
+                <li>
+                    <div class="container-card">
+                        <img src="{{Skill.imgSkill}}">
+                        <p>{{Skill.nombreSkill}}</p>
+                    </div>
+                </li>
+                <div *ngIf="isLogged" class="btns-container">
+                    <button type="button" class="btns btn-location" routerLink="/editskill/{{Skill.id}}">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
+                    <button type="button" class="btns btn-location" (click)="deleteSkill(Skill.id)">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </div>
+            </ul>
+        </div>
     </div>
     <div class="texto_about">
-        <h1>Qualifications</h1>
-        <ul>
+        <div class="title-container">
+            <h1>Educación</h1>
+            <button type="button" class="agregar" routerLink="/nuevaedu" *ngIf="isLogged"><h4><i class="bi bi-plus-square-dotted"></i></h4></button>
+        </div>
+        <ul *ngFor="let Educacion of educacion" class="cardEdu">
             <li class="studies">
-                <img class="square" src="assets/img/caece.jpg"/>
-                <p>'Spanish-English Professional Translator'<br>
-                CAECE University<br>
-                Mar del Plata, Argentina</p>
+                <img class="square" src="{{Educacion.imgEdu}}"/>
+                <p>'{{Educacion.nombreEdu}}'<br>
+                {{Educacion.descripcionEdu}}</p>
             </li>
-            <li class="studies">
-                <img class="rectangle" src="assets/img/inti.png"/>
-                <p>'Junior Full Stack Web Developer'<br>
-                National Institute of Industrial Technology (INTI)<br>
-                Buenos Aires, Argentina</p>
-            </li>
-            <li class="studies">
-                <img class="square" src="assets/img/hilet.png"/>
-                <p>'Pharmacy Assistant'<br>
-                Hilet Institute<br>
-                Mar del Plata, Argentina</p>
-            </li>
+            <div *ngIf="isLogged" class="btns-container">
+                <button type="button" class="btns" routerLink="/editedu/{{Educacion.id}}">
+                    <i class="bi bi-pencil-square"></i>
+                </button>
+                <button type="button" class="btns" (click)="delete(Educacion.id)">
+                    <i class="bi bi-trash"></i>
+                </button>
+            </div>
         </ul>
     </div>
 </div>
+<div class="footer"></div>

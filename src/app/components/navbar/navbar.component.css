@@ -9,6 +9,7 @@
     align-items: center;
     border-bottom: ridge black;
     justify-content: space-between;
+    z-index: 3;
 }
 
 .divcontainer {
@@ -27,12 +28,7 @@
 .divtexto {
     color: #eee;
     margin-left: 10px;
-}
-
-.divlenguaje {
-    background-color: blueviolet;
-    width: 50px;
-    height: 50px;
+    display: inline-block;
 }
 
 .lateral_menu {
@@ -87,20 +83,20 @@
     margin-bottom: 5px;
 }
 
-.cv {
-    margin-left: 650px;
-    background-color: #50C878;
-    color: black;
-    border-radius: 5px;
-    transition: 1s;
-}
-
-.cv:hover {
-    background-color: yellow;
-    color:#000;
-}
-
 .logo {
     height: 60px;
     width: 100px;
+}
+
+.btn-container {
+    display: flex;
+}
+
+.btn-container form {
+    margin-right: 8px;
+}
+
+.btnEdit {
+    border: none;
+    background-color: transparent;
 }

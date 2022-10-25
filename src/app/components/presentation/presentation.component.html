@@ -1,13 +1,27 @@
-    <div id="home">
-        <div class="presentation">
-        <div class="picture">
-            <img src="assets/img/perfil.jpg">
-        </div>    
-        <div class="presentation_t">
-            <p class="presentation_text">
-                "Hi, welcome to my portfolio!<br>
-                Here, you will find a collection of my projects, experience, qualifications, skills, and contact details."<i class="flag flag-united-kingdom"></i>
-            </p>
+<div id="home">
+    <div class="presentation" *ngFor="let Persona of persona">
+        <div class="contain_2">
+            <div class="picture">
+                <img src={{Persona.img}}>
+            </div>
+            <div *ngIf="isLogged" class="btns-container_1">
+                <button type="button" class="btns" routerLink="/editpersona/{{Persona.id}}">
+                    <i class="bi bi-pencil-square"></i>
+                </button>
+            </div>
+        </div>
+        <div class="contain_2">
+            <div class="presentation_t">
+                <p class="presentation_text">
+                    {{Persona.presentation}}
+                </p>
+            </div>
+            <div *ngIf="isLogged" class="btns-container_2">
+                <button type="button" class="btns" routerLink="/editpersona/{{Persona.id}}">
+                    <i class="bi bi-pencil-square"></i>
+                </button>
+            </div>
         </div>
     </div>
-    </div>
+    <div class="foot"></div>
+</div>
